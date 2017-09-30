@@ -1,5 +1,5 @@
 
-package test;
+package Gereral;
 
     public class Firstlearning{
         
