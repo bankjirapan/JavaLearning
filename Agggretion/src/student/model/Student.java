@@ -7,4 +7,12 @@ package student.model;
  */
 public class Student {
     
+        private long stdID;
+        private String stdName;
+        
+        //ผูก Aggregation container หรือ Link 
+        //Student has an address;
+        private Address stdAddress;
+        
+    
 }
