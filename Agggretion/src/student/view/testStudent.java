@@ -25,6 +25,8 @@ public class testStudent {
         bank.setStdAddress(BankNewAddr);
         System.out.println(bank);
         
+        
+        //ทดลองเอา Areeya ย้ายเข้ามาบ้าน BankAddere 
         Student Areeya = new Student(1502,"Areeya",bankAddrer);
         
         System.out.println(Areeya);
