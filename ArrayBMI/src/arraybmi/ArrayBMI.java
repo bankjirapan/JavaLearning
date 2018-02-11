@@ -13,9 +13,6 @@ public class ArrayBMI {
      */
     public static void main(String[] args) {
 
-        BMI Bank = new BMI("BANK", 47, 165);
-
-        System.out.println(Bank);
 
     }
 

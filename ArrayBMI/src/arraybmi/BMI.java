@@ -20,7 +20,7 @@ public class BMI {
             this.CalBMI = -2;
         }
         
-        this.CalBMI = Weight * (Height*Height);
+        this.CalBMI = Weight / (Height*Height);
     }
 
     public BMI() {
