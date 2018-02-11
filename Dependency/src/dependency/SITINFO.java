@@ -20,6 +20,18 @@ public class SITINFO {
         this.gard = gard;
         this.stdID = stdID;
         this.SITAddr = SITAddr;
+        
+        if(gard >= 80){
+            this.GardShow = 'A';
+        } else if(gard >= 70){
+             this.GardShow = 'B';
+        } else if(gard >= 60){
+             this.GardShow = 'C';
+        } else if(gard >= 50){
+             this.GardShow = 'D';
+        } else {
+            this.GardShow = 'F';
+        }
       
 
     }
@@ -59,7 +71,7 @@ public class SITINFO {
 
     @Override
     public String toString() {
-        return "SITINFO{" + "gard=" + gard + ", stdID=" + stdID + ", SITAddr=" + SITAddr + '}';
+        return "SITINFO " + "gard=" + gard + ", stdID=" + stdID + ", SITAddr=" + SITAddr +"\n ได้เกรด "+GardShow;
     }
     
 
