@@ -5,6 +5,8 @@
  */
 package studentgrade;
 
+import studentgrade.model.UnderGraduatedStudent;
+
 /**
  *
  * @author INT105
@@ -15,7 +17,11 @@ public class StudentGrade {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       
+        UnderGraduatedStudent bank = new UnderGraduatedStudent();
+        
+        System.out.println(bank);
+        
     }
     
 }
