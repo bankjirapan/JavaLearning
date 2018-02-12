@@ -71,7 +71,7 @@ public class SITINFO {
 
     @Override
     public String toString() {
-        return "SITINFO " + "gard=" + gard + ", stdID=" + stdID + ", SITAddr=" + SITAddr +"\n ได้เกรด "+GardShow;
+        return "SITINFO " + "gard=" + gard + ", stdID=" + stdID + ", SITAddr=" + SITAddr +"\n ได้เกรด = "+GardShow;
     }
     
 
