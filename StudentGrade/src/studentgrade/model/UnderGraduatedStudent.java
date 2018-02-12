@@ -13,6 +13,12 @@ public class UnderGraduatedStudent extends Student{
     
     private String project;
 
+    public UnderGraduatedStudent() {
+        
+        System.out.println("UnderGraduatedStudent Working");
+        
+    }
+
     
     
     public String getProject() {
