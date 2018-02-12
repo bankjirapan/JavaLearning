@@ -20,8 +20,7 @@ public class StudentGrade {
        
         UnderGraduatedStudent bank = new UnderGraduatedStudent();
         
-        System.out.println(bank);
-        
+     
     }
     
 }
