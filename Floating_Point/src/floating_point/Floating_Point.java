@@ -10,6 +10,8 @@ public class Floating_Point {
 
         System.out.println("Hello to FloatPoint");
 
+        
+        //ประกาศตัวแปร float
         float myFloat;
 
         //กำหนดค่าให้กับ MyFloat
@@ -40,6 +42,8 @@ public class Floating_Point {
 
         System.out.println("==================");
 
+        
+        //
         float highfloat;
         highfloat = Float.MAX_VALUE;
 
