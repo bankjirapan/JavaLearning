@@ -1,7 +1,7 @@
-
 package heroesbattle;
 
 public class Armor {
+
     //รับ Arrgregatiom เข้ามาชื่อ name
     private String name;
     private int armor;
@@ -19,7 +19,5 @@ public class Armor {
     public String toString() {
         return "Armor{" + "name=" + name + ", armor=" + armor + '}';
     }
-    
-    
-       
+
 }

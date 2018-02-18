@@ -2,6 +2,7 @@
 package heroesbattle;
 
 public class Weapon {
+    //รับชื่อมาเป็น Arggregation;
     private String name;
     private int power;
 
