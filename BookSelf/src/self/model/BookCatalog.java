@@ -10,8 +10,12 @@ package self.model;
  * @author Tisanai.Cha
  */
 public class BookCatalog {
+    
+ 
 
     private int numOfBooks;
+    //นำไฟล์เข้ามามันคือการผูก Class
+    private Book books[];
 
     public BookCatalog(int lengthOfCatalog) {
         books = new Book[lengthOfCatalog];
@@ -30,12 +34,41 @@ public class BookCatalog {
     }
 
     public int addBook(Book bookAdded) {
-        //add code here
+        
+        int value = 0;
+        for(int i = 0; i<books.length; i++){
+            if(books[i] == null){
+                books[i] = bookAdded;
+                this.numOfBooks++;
+                value = i;
+                break;
+             
+            } else {
+               value = -1;
+            }
+            
+            
+             
+        }
+        
+        return value;
 
     }
 
     public int unAvailableBook(Book bookUnAvailable) {
-        //add code here
+       int value = 0;
+       for(int i = 0; i<books.length; i++){
+           if(books[i].equals(bookUnAvailable)){
+       
+               this.numOfBooks++;
+               value = i;
+               break;
+               
+           } else {
+               value = -1;
+           }
+       }
+       return value;
 
     }
 
