@@ -32,15 +32,22 @@ public class Hero {
     }
     
     public void attacted(int power){
-        int leftPower;
-        leftPower = power - armor.getArmor();
-        this.health = health - leftPower;
+        int Delete_power;
+        
+            Delete_power = power - armor.getArmor();
+            this.health = health - Delete_power;
     }
     
     public void attacted(Hero enemy){
-        int leftPower;
-        leftPower = enemy.getAttactPower()-armor.getArmor();
-        this.health = this.health - leftPower;
+        
+        int Delete_power;
+        
+        Delete_power = enemy.getAttactPower() - armor.getArmor();
+       
+        this.health = health - Delete_power;
+            
+        
+    
     }    
     
     
