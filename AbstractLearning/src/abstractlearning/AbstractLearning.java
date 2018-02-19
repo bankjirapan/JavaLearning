@@ -71,6 +71,15 @@ public class AbstractLearning {
         
         System.out.println(rec1.compareTo(rec2));
         
+        int result = rec1.compareTo(rec2);
+        if(result > 0){
+            System.out.println("rec2 comes before rec1");
+        } else if(result < 0){
+            System.out.println("rec1 comes before rec2");
+        } else {
+            System.out.println("Equles");
+        }
+        
         
     }
     
