@@ -7,6 +7,7 @@ package abstractlearning;
 
 import abstractlearning.model.Circle;
 import abstractlearning.model.Circle2;
+import abstractlearning.model.Rectangle;
 import abstractlearning.model.Snape;
 import abstractlearning.model.Square2;
 
@@ -56,12 +57,19 @@ public class AbstractLearning {
         //compare จะรีเทินค่า 3 ค่า 
         /*
         ถ้า รีเทินเป็น 0 แปลว่า 2 มันเท่ากัน
-        ถ้า รีเทิน -1 
-        ถ้า รีเทิน +
+        ถ้า รีเทิน -1 แสดงว่าค่าที่ไปเปรียบมากกว่าค่าที่เราเปรียบ
+        ถ้า รีเทิน + แสดงว่าค่าที่ไปเปรียบเทียบมากกว่าค่าที่เอาไปเปรียบ
         
         */
         
         System.out.println(str1.compareTo(str2));
+        
+        
+        System.out.println("------ เรื่องของ Ractangle ---------");
+        Rectangle rec1 = new Rectangle(5,10);
+        Rectangle rec2 = new Rectangle(5,10);
+        
+        System.out.println(rec1.compareTo(rec2));
         
         
     }
