@@ -8,6 +8,7 @@ package abstractlearning;
 import abstractlearning.model.Circle;
 import abstractlearning.model.Circle2;
 import abstractlearning.model.Snape;
+import abstractlearning.model.Square2;
 
 /**
  *
@@ -30,6 +31,26 @@ public class AbstractLearning {
         System.out.println("Area = "+area);
         System.out.println("Circum = "+circum);
         System.out.println(c2);
+        
+        
+        //*****************************
+        
+        Square2 sq = new Square2(5);
+        
+        System.out.println("Area = "+sq.findArea());
+        System.out.println("Circum = "+sq.findCircumference());
+        
+        
+        
+        //ตัวอย่างงงง Compareto ----------
+        System.out.println("-------End--------");
+        
+        String str1 = "Book";
+        String str2 = "ant";
+        //มันจะรีเทินค่าเป็น Aggy
+        System.out.println(str1.compareTo(str2));
+        
+        
     }
     
 }
