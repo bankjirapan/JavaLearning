@@ -51,6 +51,16 @@ public class AbstractLearning {
         
         // A-Z เท่ากับ 65-90  
         // a-z เท่ากับ 97-122
+        
+        
+        //compare จะรีเทินค่า 3 ค่า 
+        /*
+        ถ้า รีเทินเป็น 0 แปลว่า 2 มันเท่ากัน
+        ถ้า รีเทิน -1 
+        ถ้า รีเทิน +
+        
+        */
+        
         System.out.println(str1.compareTo(str2));
         
         
