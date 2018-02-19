@@ -1,18 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package abstractlearning.model;
 
-/**
- *
- * @author INT105
- */
+
+//ประกาศว่าเป็น interface
 public interface ShapeInterface {
     
     int color = 256;
     
+    
+    //เป็น Method 
     public abstract double findArea();
     public abstract double findCircumference();
     
