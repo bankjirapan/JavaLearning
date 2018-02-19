@@ -10,11 +10,17 @@ package abstractlearning.model;
 
 
 //ถ้าโยงไป implements จะต้องมี method ของ implement ใช้งานด้วย
-public class Rectangle implements ShapeInterface {
+public class Rectangle implements ShapeInterface , Comparable<Rectangle> {
 
     private double weight;
     private double lenght;
 
+    
+    //มันมาจาก implement ไอ้  Compareto อะ
+    public int compareTo(Rectangle  o){   
+        return (int)(findArea()-o.findArea());  
+    }
+    
     public Rectangle(double weight, double lenght) {
         this.weight = weight;
         this.lenght = lenght;
@@ -24,8 +30,8 @@ public class Rectangle implements ShapeInterface {
     public double findArea() {
         return weight * lenght;
     }
+    
     // Class นี้มาจาก Implement ที่ต้องมี
-
     public double findCircumference() {
         return 2 * (weight + lenght);
     }
