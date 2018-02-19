@@ -48,6 +48,9 @@ public class AbstractLearning {
         String str1 = "Book";
         String str2 = "ant";
         //มันจะรีเทินค่าเป็น Aggy
+        
+        // A-Z เท่ากับ 65-90  
+        // a-z เท่ากับ 97-122
         System.out.println(str1.compareTo(str2));
         
         
