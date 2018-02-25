@@ -8,14 +8,21 @@ public class Poor {
 
     private String name;
     private String location;
-    private String Category;
+    protected String Category;
     private String Descrption;
     private String DateSee;
 
     public Poor() {
     }
 
-    public Poor(String name, String location, String Category, String Descrption, String DateSee) {
+    public Poor(
+            String name,
+            String location,
+            String Category, 
+            String Descrption,
+            String DateSee
+    ) {
+        
         this.name = name;
         this.location = location;
         this.Category = Category;
@@ -25,6 +32,7 @@ public class Poor {
 
     public String getName() {
         return name;
+
     }
 
     public void setName(String name) {
