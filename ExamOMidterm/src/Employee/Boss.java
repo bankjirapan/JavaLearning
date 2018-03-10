@@ -35,7 +35,7 @@ public class Boss extends Employee{
         //return "Boss{" + "rate=" + rate + '}';
         
         String BossFunction;
-        BossFunction = "List Employee"+super.toString()+"";
+        BossFunction = "List Employee "+super.toString()+" Rete = "+rate;
         
         return BossFunction;
     }
