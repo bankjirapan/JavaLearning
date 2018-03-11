@@ -9,6 +9,8 @@ package trainer.model;
  *
  * @author bankcom
  */
-public class ExerciseMachine {
+public interface ExerciseMachine  {
+    
+    public abstract int helpMetabolism();
     
 }

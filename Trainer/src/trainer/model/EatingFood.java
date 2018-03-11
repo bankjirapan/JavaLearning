@@ -9,6 +9,33 @@ package trainer.model;
  *
  * @author bankcom
  */
-public class EatingFood {
+public class EatingFood extends Food{
+    
+    private String foodTime;
+
+    public EatingFood() {
+    }
+    
+    
+
+    public String getFoodTime() {
+        return foodTime;
+    }
+    
+    public int getEnergy(){
+        return 400;
+    }
+    
+    public int getEnergyMore(){
+        return 7000;
+    }
+
+    public void setFoodTime(String foodTime) {
+        this.foodTime = foodTime;
+    }
+    
+    
+    
+    
     
 }

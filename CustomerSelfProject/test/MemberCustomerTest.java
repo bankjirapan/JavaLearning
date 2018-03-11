@@ -26,7 +26,7 @@ public class MemberCustomerTest {
   }
   
  
-  
+
   @Test
   public void addNoPointBuyingPriceToMemberPoints(){
         mc=new MemberCustomer ("Ann", "LoveShop", 0);
@@ -100,6 +100,9 @@ public class MemberCustomerTest {
           
        double actual=mc.getPoints();
        double expected=0;
-       assertEquals(expected, actual, 0.01);;
+       assertEquals(expected, actual, 0.01);
   }
+
+
+
 }

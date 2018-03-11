@@ -9,6 +9,21 @@ package trainer.model;
  *
  * @author bankcom
  */
-public class Food {
+public abstract class Food {
+    
+    private String name;
+    private int price;
+
+    public Food() {
+    }
+    
+    
+    
+
+    
+    public abstract int getEnergy();
+    
+    
+    
     
 }

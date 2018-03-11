@@ -9,6 +9,34 @@ package trainer.model;
  *
  * @author bankcom
  */
-public class TreadMill {
+public class TreadMill implements ExerciseMachine{
+    
+    
+    private String name;
+    private int price;
+
+    public TreadMill() {
+        this.name = "Bank";
+        this.price = 350;
+    }
+
+
+    
+    //Class ของ Implements
+    @Override
+     public int helpMetabolism(){
+        return 350;
+    }
+
+  
+
+    @Override
+    public String toString() {
+        return "TreadMill{" + "name=" + name + ", price=" + price + '}';
+    }
+    
+    
+    
+    
     
 }

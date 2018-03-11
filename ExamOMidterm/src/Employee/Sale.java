@@ -29,6 +29,15 @@ public class Sale extends Employee{
     public void setCommission(double commission) {
         this.commission = commission;
     }
+    @Override
+    public double getSaraly() {
+        double com;
+        
+        com = super.getSaraly() + this.commission;
+        return com;
+    
+    }
+
 
     @Override
     public String toString() {

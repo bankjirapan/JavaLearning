@@ -29,7 +29,16 @@ public class Boss extends Employee{
     public void setRate(double rate) {
         this.rate = rate;
     }
-
+    
+    @Override
+     public double getSaraly() {
+       return super.getSaraly() * this.rate;
+        
+        
+         
+    }
+    
+   
     @Override
     public String toString() {
         //return "Boss{" + "rate=" + rate + '}';
