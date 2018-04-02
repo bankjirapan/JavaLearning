@@ -9,6 +9,22 @@ package polyproject.model;
  *
  * @author INT105
  */
-public class Dog {
+public class Dog  implements infomation{
+    
+    
+      @Override
+    public boolean isLife(){
+        return true;
+    }
+    
+    @Override
+    public String move(){
+        return "Move by 4 leg ";
+    }
+    
+     @Override 
+     public String giveDetail(){
+         return "Animal";
+     }
     
 }

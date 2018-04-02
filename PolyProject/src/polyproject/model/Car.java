@@ -9,6 +9,22 @@ package polyproject.model;
  *
  * @author INT105
  */
-public class Car {
+public class Car implements  infomation{
+    @Override
+    public boolean isLife(){
+        return true;
+    }
+    
+    @Override
+    public String move(){
+        return "eee";
+    }
+    
+     @Override 
+     public String giveDetail(){
+         return "Valeee";
+     }
+    
+    
     
 }
