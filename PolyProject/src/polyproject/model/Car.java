@@ -12,12 +12,12 @@ package polyproject.model;
 public class Car implements  infomation{
     @Override
     public boolean isLife(){
-        return true;
+        return false;
     }
     
     @Override
     public String move(){
-        return "eee";
+        return "Move by Cheel ";
     }
     
      @Override 
