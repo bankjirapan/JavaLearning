@@ -5,6 +5,7 @@
  */
 package sit.controller;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -31,6 +32,13 @@ public class mainComtroller {
         Connect = ConnectionManager.creteConection(dbLocation, pro);
         System.out.println("Database Connected finish");
 
+    }
+    
+    
+    //เชื่อมต่อข้อมูลแบบใช้ IO
+    public mainComtroller(String filename)throws ClassNotFoundException, SQLException, IOException{
+        Connect = ConnectionManager.createConnection(filename);
+        System.out.println("DATABASE Connect Finish");
     }
 
     public int inSertTrack(Student std) throws SQLException {
