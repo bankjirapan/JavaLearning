@@ -31,7 +31,7 @@ public class FolderTest {
         folder.addItem(new Application("Maps1", "OO"));
         folder.addItem(new Application("Maps2", "OO"));
         folder.addItem(new Application("Maps3", "OO"));
-        assertTrue(folder.addItem(new Application("Maps4","OO")));
+        assertTrue(folder.addItem(new Application("Maps4", "OO")));
     }
 
     @Test

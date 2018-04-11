@@ -3,19 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bankcar;
+package carforrent.model;
 
 /**
  *
  * @author bankcom
  */
-public class BANKCAR {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+public class CarSale {
     
 }
