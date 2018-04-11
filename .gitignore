@@ -18,6 +18,7 @@
 /Practice/nbproject/private/
 /Trainer/nbproject/private/
 /Trainer/build/
+<<<<<<< HEAD
 /ExamOMidterm/build/
 /MidtermLab2017-2/CourseStudent/build/
 /MidtermLab2017-2/CourseStudent/nbproject/private/
@@ -32,3 +33,17 @@
 /LabTestinClassRoom/SelfDoor/build/
 /LabTestinClassRoom/SelfDoor/nbproject/private/
 /TourSiam/nbproject/private/
+=======
+/PolyProject/nbproject/private/
+/PolyProject/build/
+/BasicJava/BMI/build/
+/BasicJava/BMI/nbproject/private/
+/BasicJava/Random/build/
+/BasicJava/Random/nbproject/private/
+/BasicJava/Mailkmutt/build/
+/BasicJava/Mailkmutt/nbproject/private/
+/BasicJava/learning/build/
+/BasicJava/learning/nbproject/private/
+/BasicJava/mod/build/
+/BasicJava/mod/nbproject/private/
+>>>>>>> 89f2213b95b640470dbb3ee114a7e406ce4ccb79
