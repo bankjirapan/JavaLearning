@@ -31,7 +31,7 @@ public class IComCare {
             System.out.print("Password : ");
             Pass = sc.next();
 
-            if (User.equalsIgnoreCase(Username) || Pass.equalsIgnoreCase(Password)) {
+            if (User.equalsIgnoreCase(Username) && Pass.equalsIgnoreCase(Password)) {
                 Loggedin = 1;
                 Loggedin();
             } else {
