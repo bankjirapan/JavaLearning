@@ -42,7 +42,37 @@ public class IComCare {
     }
 
     public static void Loggedin() {
+
+        //Import Scanner into project
+        Scanner sc = new Scanner(System.in);
+        int functionSelect;
         System.out.println(" -- Welcome Administrator -- ");
+
+        functionSelect = sc.nextInt();
+
+        while (functionSelect != 0) {
+            System.out.println("กรุณาเลือกการทำงาน \n 1: งานแจ้งซ่อม \n 2: งานขาย \n 3: ออกจากระบบ \n 0: ออกจากโปรแกรม");
+            functionSelect = sc.nextInt();
+
+            if (functionSelect == 1) {
+                RepairComputer();
+            } else if (functionSelect == 2) {
+
+            }
+        }
+
+    }
+
+    public static void RepairComputer() {
+        System.out.println("แจ้งซ่อมสินค้า");
+    }
+
+    public static void SaleItem() {
+        System.out.println("งานขายสินค้า");
+    }
+
+    public static void ExitiComCare() {
+        System.out.println("Good bye");
     }
 
 }
