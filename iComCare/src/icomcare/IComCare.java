@@ -55,15 +55,22 @@ public class IComCare {
         System.out.print("เลือกเมนู : ");
         functionSelect = sc.nextInt();
 
-        if (functionSelect == 1) {
-            RepairComputer();
-        } else if (functionSelect == 2) {
-            SaleItem();
-        } else if (functionSelect == 3) {
-            runiComCare();
-        } else {
-            Loggedin();
-
+        switch (functionSelect) {
+            case 1:
+                RepairComputer();
+                break;
+            case 2:
+                SaleItem();
+                break;
+            case 3:
+                runiComCare();
+                break;
+            case 0:
+                ExitiComCare();
+                break;
+            default:
+                Loggedin();
+                break;
         }
 
     }
