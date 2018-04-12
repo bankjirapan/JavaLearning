@@ -12,7 +12,10 @@ public class IComCare {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        runiComCare();
+    }
 
+    public static void runiComCare() {
         String Username = "admin";
         String Password = "admin";
         String User;
@@ -38,27 +41,29 @@ public class IComCare {
                 Loggedin = 0;
             }
         }
-
     }
 
     public static void Loggedin() {
 
         //Import Scanner into project
         Scanner sc = new Scanner(System.in);
-        int functionSelect;
+        int functionSelect = 99;
         System.out.println(" -- Welcome Administrator -- ");
 
+        System.out.println("กรุณาเลือกการทำงาน \n 1: งานแจ้งซ่อม \n 2: งานขาย \n 3: ออกจากระบบ \n 0: ออกจากโปรแกรม");
+
+        System.out.print("เลือกเมนู : ");
         functionSelect = sc.nextInt();
 
-        while (functionSelect != 0) {
-            System.out.println("กรุณาเลือกการทำงาน \n 1: งานแจ้งซ่อม \n 2: งานขาย \n 3: ออกจากระบบ \n 0: ออกจากโปรแกรม");
-            functionSelect = sc.nextInt();
+        if (functionSelect == 1) {
+            RepairComputer();
+        } else if (functionSelect == 2) {
+            SaleItem();
+        } else if (functionSelect == 3) {
+            runiComCare();
+        } else {
+            Loggedin();
 
-            if (functionSelect == 1) {
-                RepairComputer();
-            } else if (functionSelect == 2) {
-
-            }
         }
 
     }
