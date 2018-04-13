@@ -143,7 +143,22 @@ public class IComCare {
     }
 
     public static void SearchData() throws ClassNotFoundException, SQLException {
-        System.out.println("ค้นหาข้อมูล");
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println(" -- ค้นหาข้อมูล -- ");
+        icomcareController icomcare = new icomcareController();
+        int numOfItem;
+
+        System.out.print("กรุณากรอกหมายเลขที่จะค้นหา : ");
+        numOfItem = sc.nextInt();
+
+        // System.out.println(icomcare.SearchData(numOfItem));
+        if (icomcare.SearchData(numOfItem).size() == 0) {
+            System.out.println("ไม่พบข้อมูล");
+        } else {
+            System.out.println("ผลการค้นหา : " + icomcare.SearchData(numOfItem));
+        }
+        Loggedin();
     }
 
     public static void ShowAllDATA() throws ClassNotFoundException, SQLException {
