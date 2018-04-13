@@ -11,7 +11,7 @@ package icomcare.model;
  */
 public class addRepair {
 
-    private static int numOfItem;
+    private int numOfItem;
     private String nameCustomer;
     private String ItemRepair;
     private String Category;
@@ -46,14 +46,15 @@ public class addRepair {
     public addRepair() {
     }
 
-    public static int getNumOfItem() {
+    public int getNumOfItem() {
         return numOfItem;
     }
 
-    public static void setNumOfItem(int numOfItem) {
-        addRepair.numOfItem = numOfItem;
+    public void setNumOfItem(int numOfItem) {
+        this.numOfItem = numOfItem;
     }
 
+    
     public String getNameCustomer() {
         return nameCustomer;
     }
@@ -128,19 +129,16 @@ public class addRepair {
 
     @Override
     public String toString() {
-        return "รายการแจ้งซ๋อม{" + 
-                "nameCustomer=" + nameCustomer + 
-                ", ItemRepair=" + ItemRepair +
-                ", Category=" + Category + 
-                ", discription=" + discription +
-                ", analyzeWaste=" + analyzeWaste +
-                ", Solution=" + Solution + 
-                ", DateOfRepair=" + DateOfRepair + 
-                ", DateSend=" + DateSend + 
-                ", Price=" + Price + '}';
+        return "รายการแจ้งซ๋อม{"
+                + "nameCustomer=" + nameCustomer
+                + ", ItemRepair=" + ItemRepair
+                + ", Category=" + Category
+                + ", discription=" + discription
+                + ", analyzeWaste=" + analyzeWaste
+                + ", Solution=" + Solution
+                + ", DateOfRepair=" + DateOfRepair
+                + ", DateSend=" + DateSend
+                + ", Price=" + Price + '}';
     }
-    
-    
-    
 
 }
