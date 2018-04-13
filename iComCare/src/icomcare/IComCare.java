@@ -179,6 +179,7 @@ public class IComCare {
         int RepairRun = 1;
         int numOfItemDelete;
         int numOfUpdate;
+
         addRepair addrepair = new addRepair();
 
         System.out.println("จัดการการแจ้งซ๋อม");
@@ -200,10 +201,12 @@ public class IComCare {
                 RepairRun = 1;
                 System.out.print("กรุณาใส่หมายเลขแจ้งซ่อมที่จะแก้ไข : ");
                 numOfUpdate = sc.nextInt();
-                int CheckEmtye = icomcare.CheckData(numOfUpdate);
-                if (CheckEmtye == 0) {
+
+                if (icomcare.SearchData(numOfUpdate).size() == 0) {
+
                     System.out.println("ไม่สามารถแก้ไขได้ไม่พบข้อมูลดังเกล่า");
                 } else {
+
                     while (RepairRun != 0) {
                         System.out.println("------- แก้ไข -------- ");
                         System.out.println("หมายเลขแจ้งซ่อมคือ : " + numOfUpdate);
@@ -235,6 +238,7 @@ public class IComCare {
 
                         int UpdateData = icomcare.UpdateData(numOfUpdate, addrepair);
                         System.out.println("แก้ไขแล้ว " + UpdateData);
+
                     }
 
                 }
