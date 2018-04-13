@@ -18,7 +18,8 @@ public class IComCare {
     public static void main(String[] args) {
         try {
             // runiComCare();
-            icomcareController icomcare = new icomcareController();
+            System.out.print("สถานะการเชื่อมต่อฐานข้อมูล : ");icomcareController icomcare = new icomcareController();
+            
             runiComCare();
         } catch (ClassNotFoundException ex) {
             System.out.println(ex);
@@ -38,7 +39,6 @@ public class IComCare {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("=== Welcome to iComCare - Manages Computershop === \n");
-
         while (Loggedin != 1) {
             System.out.print("Please Login \n");
             System.out.print("Username : ");

@@ -29,7 +29,7 @@ public class icomcareController {
                 PasswordDB
         );
         
-        //System.out.println("เชื่อมต่อฐานข้อมูลสำเร็จ");
+        System.out.println("OK");
 
     }
 
