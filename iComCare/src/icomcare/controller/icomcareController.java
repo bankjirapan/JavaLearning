@@ -10,6 +10,7 @@ import icomcare.model.addRepair;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Random;
 
 /**
  *
@@ -37,9 +38,10 @@ public class icomcareController {
 
     public int addRepair(addRepair addrepair) throws SQLException {
 
-        int id = 1;
-        id++;
-
+       
+        Random rand = new Random();
+        int id = rand.nextInt(99999) + 1;
+        
         int numOfItem = addrepair.getNumOfItem();
         String nameCustomer = addrepair.getNameCustomer();
         String Item = addrepair.getItemRepair();
@@ -51,7 +53,7 @@ public class icomcareController {
         String DateSend = addrepair.getDateSend();
         double Price = addrepair.getPrice();
         
-        String insertSQL = "INSERT INTO ADDREPAIR (ID,NUMOFITEM,NAMECUSTOMER,ITEMREPAIR,CATEGORY,DISCRIPTION,ANALYZE,SOLOTION,DATEREPAIR,DATESEND,PRICE) "
+        String insertSQL = "INSERT INTO ADDREPAIR (ID,NUMOFITEM,NAMECUSTOMER,ITEMREPAIR,CATEGORY,DISCRIPTION,ANALYZE,SOLUTION,DATEREPAIR,DATESEND,PRICE) "
                 + "VALUES ("+id+","+numOfItem+",'"+nameCustomer+"','"+Item+"','"+Category+"','"+Discript+"','"+analyzeWaste+"','"+Solution+"','"+DateOfRepair+"','"+DateSend+"','"+Price+"')";
 
         Statement commandSQL = connect.createStatement();
