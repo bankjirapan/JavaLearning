@@ -139,25 +139,26 @@ public class icomcareController {
 
         Statement st = connect.createStatement();
         int Nodata = 9;
+      
         String querySql = "select * from ADDREPAIR";
         ResultSet result = st.executeQuery(querySql);
+        
+        
+         int numItemDB = result.getMetaData().getColumnCount();
+          
+          
         while (result.next()) {
             int numOfItemDATA = result.getInt("NUMOFITEM");
 
-            if (numOfItem == numOfItemDATA) {
-                Nodata = 1;
-            } else {
-                Nodata = 0;
-            }
-
+        
         }
 
-        return Nodata;
+               
+        return 1;
     }
-    
-    public int UpdateData(int numOfItem, addRepair addrepair) throws SQLException{
-       
-      
+
+    public int UpdateData(int numOfItem, addRepair addrepair) throws SQLException {
+
         String nameCustomer = addrepair.getNameCustomer();
         String Item = addrepair.getItemRepair();
         String Category = addrepair.getCategory();
@@ -168,21 +169,13 @@ public class icomcareController {
         String DateSend = addrepair.getDateSend();
         double Price = addrepair.getPrice();
 
-        String insertSQL = "UPDATE ADDREPAIR SET NAMECUSTOMER = '"
-                +nameCustomer+", ITEMREPAIR = '"
-                +Item+"',CATEGORY = '"
-                +Category+"',DISCRIPTION = '"
-                +Discript+"', ANALYZE = "
-                +analyzeWaste+",SOLUTION = '"
-                +Solution+"',DATEREPAIR = '"
-                +DateOfRepair+"',DATESEND = '"
-                +DateSend+"',PRICE = '"
-                +Price+"' WHERE ADDREPAIR;";
+        String UpdateSQl = "UPDATE ADDREPAIR SET NAMECUSTOMER = '" + nameCustomer + "'"
+                + ",ITEMREPAIR = '"+Item+"',CATEGORY= '"+Category+"',DISCRIPTION='"+Discript+"',ANALYZE='"+analyzeWaste+"',SOLUTION='"+Solution+"',DATEREPAIR='"+DateOfRepair+"',DATESEND='"+DateSend+"',PRICE='"+Price+"' WHERE NUMOFITEM=" + numOfItem + "";
 
         Statement commandSQL = connect.createStatement();
-        commandSQL.executeUpdate(insertSQL);
+        commandSQL.execute(UpdateSQl);
         return 0;
- 
+
     }
 
     public void close() throws SQLException, ClassNotFoundException {

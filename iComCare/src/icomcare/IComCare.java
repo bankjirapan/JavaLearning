@@ -182,7 +182,7 @@ public class IComCare {
             UserSelect = sc.nextInt();
 
             if (UserSelect == 1) {
-
+                RepairRun = 1;
                 System.out.print("กรุณาใส่หมายเลขแจ้งซ่อมที่จะแก้ไข : ");
                 numOfUpdate = sc.nextInt();
                 int CheckEmtye = icomcare.CheckData(numOfUpdate);
@@ -219,7 +219,7 @@ public class IComCare {
                         RepairRun = 0;
 
                         int UpdateData = icomcare.UpdateData(numOfUpdate, addrepair);
-                        System.out.println("เพิ่มรายการแล้ว " + UpdateData);
+                        System.out.println("แก้ไขแล้ว " + UpdateData);
                     }
 
                 }
