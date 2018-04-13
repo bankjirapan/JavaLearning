@@ -25,12 +25,11 @@ public class ConnectionManager {
             String fileName
     )
             //ป้องกันการเกิด Exception
-            throws FileNotFoundException, IOException, SQLException
-    {
-        
+            throws FileNotFoundException, IOException, SQLException {
+
         //โหลดไฟล์ผ่าน Properties
         Properties pros = new Properties();
-        
+
         //ใช้ pros ผ่าน .load แล้วบอกว่าจะอ่านไฟล์
         pros.load(new FileReader(fileName));
 

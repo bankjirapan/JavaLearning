@@ -4,7 +4,11 @@ package icomcare;
  *
  * @author bankcom
  */
+import icomcare.controller.icomcareController;
+import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class IComCare {
 
@@ -12,7 +16,15 @@ public class IComCare {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        runiComCare();
+        try {
+            // runiComCare();
+            icomcareController icomcare = new icomcareController();
+            runiComCare();
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex);
+        } catch (SQLException SQLEx) {
+            System.out.println(SQLEx);
+        }
     }
 
     public static void runiComCare() {
@@ -85,7 +97,7 @@ public class IComCare {
                 "------------------------------- \n"
                 + "++++ อยู่ระหว่างการพัฒนา ++++ \n"
                 + "-------------------------------");
-       
+
         Loggedin();
     }
 
