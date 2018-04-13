@@ -22,16 +22,8 @@ public class addRepair {
     private String DateSend;
     private double Price;
 
-    public addRepair(String nameCustomer,
-            String ItemRepair,
-            String Category,
-            String discription,
-            String analyzeWaste,
-            String Solution,
-            String DateOfRepair,
-            String DateSend,
-            double Price
-    ) {
+    public addRepair(int numOfItem, String nameCustomer, String ItemRepair, String Category, String discription, String analyzeWaste, String Solution, String DateOfRepair, String DateSend, double Price) {
+        this.numOfItem = numOfItem;
         this.nameCustomer = nameCustomer;
         this.ItemRepair = ItemRepair;
         this.Category = Category;
@@ -42,6 +34,15 @@ public class addRepair {
         this.DateSend = DateSend;
         this.Price = Price;
     }
+
+    public addRepair(int numOfItem, String nameCustomer) {
+        this.numOfItem = numOfItem;
+        this.nameCustomer = nameCustomer;
+    }
+    
+    
+
+   
 
     public addRepair() {
     }
@@ -126,19 +127,23 @@ public class addRepair {
     public void setPrice(double Price) {
         this.Price = Price;
     }
+    
+
 
     @Override
     public String toString() {
-        return "รายการแจ้งซ๋อม{"
-                + "nameCustomer=" + nameCustomer
-                + ", ItemRepair=" + ItemRepair
-                + ", Category=" + Category
-                + ", discription=" + discription
-                + ", analyzeWaste=" + analyzeWaste
-                + ", Solution=" + Solution
-                + ", DateOfRepair=" + DateOfRepair
-                + ", DateSend=" + DateSend
-                + ", Price=" + Price + '}';
+        return "รายการแจ้งซ๋อม \n"
+                + "nameCustomer : " + nameCustomer +"\n"
+                + "ItemRepair : " + ItemRepair  +"\n"
+                + "Category : " + Category  +"\n"
+                + "discription : " + discription  +"\n"
+                + "analyzeWaste : " + analyzeWaste  +"\n"
+                + "Solution : " + Solution  +"\n"
+                + "DateOfRepair : " + DateOfRepair  +"\n"
+                + "DateSend : " + DateSend  +"\n"
+                + "Price : " + Price + '\n';
     }
+    
+    
 
 }

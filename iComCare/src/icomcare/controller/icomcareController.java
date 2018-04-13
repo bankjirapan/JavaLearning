@@ -7,6 +7,7 @@ package icomcare.controller;
 
 import icomcare.database.ConnectManager;
 import icomcare.model.ShowRepair;
+import icomcare.model.ShowSameData;
 import icomcare.model.addRepair;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -94,13 +95,94 @@ public class icomcareController {
                     DateSend,
                     Price
             );
-            
+
             ShowAllData.add(AddForShow);
 
         }
 
         return ShowAllData;
 
+    }
+
+    public ArrayList<ShowSameData> ShowSameData() throws SQLException {
+
+        Statement st = connect.createStatement();
+        String querySql = "select * from ADDREPAIR";
+        ResultSet result = st.executeQuery(querySql);
+
+        ArrayList<ShowSameData> ShowSameData = new ArrayList<ShowSameData>();
+
+        while (result.next()) {
+            int numOfItem = result.getInt("NUMOFITEM");
+            String nameCustommer = result.getString("NAMECUSTOMER");
+
+            ShowSameData Samedata = new ShowSameData(numOfItem, nameCustommer);
+
+            ShowSameData.add(Samedata);
+
+        }
+
+        return ShowSameData;
+    }
+
+    public int DeleteRepair(int NumOfItem) throws SQLException {
+
+        Statement st = connect.createStatement();
+        String SQLCommand = "DELETE FROM ADDREPAIR WHERE NUMOFITEM=" + NumOfItem + "";
+
+        st.executeUpdate(SQLCommand);
+
+        return 0;
+    }
+
+    public int CheckData(int numOfItem) throws SQLException {
+
+        Statement st = connect.createStatement();
+        int Nodata = 9;
+        String querySql = "select * from ADDREPAIR";
+        ResultSet result = st.executeQuery(querySql);
+        while (result.next()) {
+            int numOfItemDATA = result.getInt("NUMOFITEM");
+
+            if (numOfItem == numOfItemDATA) {
+                Nodata = 1;
+            } else {
+                Nodata = 0;
+            }
+
+        }
+
+        return Nodata;
+    }
+    
+    public int UpdateData(int numOfItem, addRepair addrepair) throws SQLException{
+       
+      
+        String nameCustomer = addrepair.getNameCustomer();
+        String Item = addrepair.getItemRepair();
+        String Category = addrepair.getCategory();
+        String Discript = addrepair.getDiscription();
+        String analyzeWaste = addrepair.getAnalyzeWaste();
+        String Solution = addrepair.getSolution();
+        String DateOfRepair = addrepair.getDateOfRepair();
+        String DateSend = addrepair.getDateSend();
+        double Price = addrepair.getPrice();
+
+        String insertSQL = "UPDATE ADDREPAIR SET NAMECUSTOMER = '"
+                +nameCustomer+", ITEMREPAIR = '"
+                +Item+"',CATEGORY = '"
+                +Category+"',DISCRIPTION = '"
+                +Discript+"', ANALYZE = "
+                +analyzeWaste+",SOLUTION = '"
+                +Solution+"',DATEREPAIR = '"
+                +DateOfRepair+"',DATESEND = '"
+                +DateSend+"',PRICE = '"
+                +Price+"' WHERE ADDREPAIR;";
+
+        Statement commandSQL = connect.createStatement();
+        commandSQL.executeUpdate(insertSQL);
+        return 0;
+ 
     }
 
     public void close() throws SQLException, ClassNotFoundException {
