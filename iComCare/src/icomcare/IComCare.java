@@ -81,6 +81,12 @@ public class IComCare {
 
     public static void SaleItem() {
         System.out.println("งานขายสินค้า");
+        System.out.println(
+                "------------------------------- \n"
+                + "++++ อยู่ระหว่างการพัฒนา ++++ \n"
+                + "-------------------------------");
+       
+        Loggedin();
     }
 
     public static void ExitiComCare() {
