@@ -1,6 +1,0 @@
-#การตั้งชื่อเป็นอะไรก็ได้
-SERVER_NAME=LOCALHOST
-SERVER_PORT=1527
-DB_NAME=itrackDB
-DB_USER=administrator
-DB_PASSWORD=admin
