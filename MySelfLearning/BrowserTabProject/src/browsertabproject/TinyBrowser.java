@@ -40,7 +40,7 @@ public class TinyBrowser {
         Tab tempTab = browser.getActiveTab();
         tempTab.setUrl("www.kmutt.ac.th");
 
-        browser.getActiveTab().getPageContent();
+        System.out.println(browser.getActiveTab().getPageContent());
 
         System.out.println("Output #02\n" + browser);
         
