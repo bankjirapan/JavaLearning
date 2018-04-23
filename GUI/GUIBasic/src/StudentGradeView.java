@@ -18,9 +18,29 @@ public class StudentGradeView {
     
     private JFrame freameGrade;
     private JLabel lblSubject[];
-    private JTextField tetGrade[];
+    private JTextField txtGrade[];
     private JTextField txtCredit[];
     private JButton btnCalulate;
+
+    public StudentGradeView(int numOfSubjects) {
+
+            //create array of label and Textfidels
+            lblSubject = new JLabel[numOfSubjects];
+            txtGrade = new JTextField[numOfSubjects];
+            txtCredit = new JTextField[numOfSubjects];
+            initGui();
+
+    }
+    
+    
+    public void initGui(){
+        JFrame FrameGrade = new JFrame("GPA Calulator");
+        FrameGrade.setSize(500,500);
+        FrameGrade.setVisible(true);
+        FrameGrade.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+  
     
     
 }
