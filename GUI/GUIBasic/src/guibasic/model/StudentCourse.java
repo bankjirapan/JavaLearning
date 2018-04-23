@@ -10,7 +10,7 @@ package guibasic.model;
  * @author INT105
  */
 public class StudentCourse {
-    
+
     //private Course course;
     private String subject;
     private float credit;
@@ -24,8 +24,21 @@ public class StudentCourse {
 
     public StudentCourse() {
     }
-    
 
+    public float CovertGrade() {
+        float value = -1;
+
+        switch (grade) {
+            
+            case "A" : value = 4; break;
+            case "B" : value = 3; break;
+            case "C" : value = 2; break;
+            case "D" : value = 1; break;
+            case "F" : value = 0; break;
+        }
+        
+        return value;
+    }
 
     public String getSubject() {
         return subject;
@@ -55,9 +68,5 @@ public class StudentCourse {
     public String toString() {
         return "StudentCourse{" + "subject=" + subject + ", credit=" + credit + ", grade=" + grade + '}';
     }
-    
-    
-    
-    
-    
+
 }
