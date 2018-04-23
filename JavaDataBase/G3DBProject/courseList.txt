@@ -1,0 +1,5 @@
+INT102,Computer Programming I,
+INT101,IT Fundamental,
+INT104,Discrete Math,
+GEN111,Good Man,
+LNG101,English Fundamental
