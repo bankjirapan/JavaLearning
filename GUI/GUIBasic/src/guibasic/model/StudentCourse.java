@@ -24,6 +24,8 @@ public class StudentCourse {
 
     public StudentCourse() {
     }
+    
+
 
     public String getSubject() {
         return subject;
