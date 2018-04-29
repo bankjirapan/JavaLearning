@@ -1,16 +1,16 @@
 package smarttvscreen;
 
-public class SystemApp {
+public class SystemApp extends Application{
 
     private String type;
 
     public SystemApp(String name, String type) {
-
+        super(name);
         this.type = type;
     }
 
     public SystemApp(String name, String description, String type) {
-
+        super(name,description);
         this.type = type;
     }
 

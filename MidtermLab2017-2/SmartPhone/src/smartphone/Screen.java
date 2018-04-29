@@ -1,15 +1,42 @@
 package smartphone;
 
+import java.util.Objects;
+
 public class Screen {
 
     public static final int MAX_GRID = 24;
     private Item[] items;
+    private Widget widget;
     private int itemCount;
     private int gridCount;
 
     public Screen() {
 
+        this.items = new Item[MAX_GRID];
+        this.itemCount = 0;
+        this.gridCount = 0;
+
     }
+
+    public boolean addItem(Item obj) {
+        int size = 1;
+        if (obj != null && obj instanceof Widget) {
+            Widget wg = (Widget) obj;
+            size = wg.getnGrid();
+        }
+        if (this.gridCount + size <= 24) {
+            this.items[itemCount] = obj;
+            this.itemCount++;
+            this.gridCount = this.gridCount + size;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    
+ 
+    
 
     public Item[] getItems() {
         return items;
@@ -22,7 +49,6 @@ public class Screen {
     public int getGridCount() {
         return gridCount;
     }
-
 
     @Override
     public String toString() {
