@@ -10,21 +10,32 @@ public class HorizontalGrid {
 
     public HorizontalGrid(String name, int i) {
 // hint 2 
+
+        //สร้าง Array Object ที่มาขนาด i 
         apps = new Application[i];
         this.name = name;
         this.numOfApps = i;
+        
+        //เริ่มต้นค่าเป็น 0;
         this.insertedApps = 0;
     }
 
 // hint 3 addApp
+    
+    //Method addApp รับพารามิเตอร์ app
     public boolean addApp(Application app) {
 
+        //ถ้า insertedApps น้อยกว่า Array Object apps
         if (insertedApps < apps.length) {
 
+            //วนลูปหาช่องที่สว่าง
             for (int i = 0; i < apps.length; i++) {
+                //เอาข้อมูลเพิ่มโลดดด
                 apps[insertedApps] = app;
 
             }
+            
+            // เพิ่มค่า Return ปกติ
             this.insertedApps++;
             return true;
 
@@ -33,6 +44,8 @@ public class HorizontalGrid {
 
     }
 
+    
+    // Return เป็น Object
     public Application[] getApps() {
         return apps;
     }
