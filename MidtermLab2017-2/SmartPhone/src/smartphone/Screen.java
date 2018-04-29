@@ -7,7 +7,6 @@ public class Screen {
 
     public static final int MAX_GRID = 24;
     private Item[] items;
-    private Widget widget;
     private int itemCount;
     private int gridCount;
 
