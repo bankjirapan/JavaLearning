@@ -51,5 +51,10 @@
 /iComCare/build/
 /JavaDataBase/G3DBProject/build/
 /JavaDataBase/G3DBProject/nbproject/private/
+<<<<<<< HEAD
 /MidtermLab2017-2/SmartTVScreen/build/
 /MidtermLab2017-2/DeckProject/build/
+=======
+/GUI/GUIBasic/nbproject/private/
+/GUI/GUIBasic/build/
+>>>>>>> d55087d320aade705a735a719d7db7e95b19bf96
