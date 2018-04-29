@@ -12,6 +12,7 @@ public class Application extends Item {
         this.icon = icon;
     }
 
+    //ได้จากการ insert
     @Override
     public int hashCode() {
         int hash = 7;
