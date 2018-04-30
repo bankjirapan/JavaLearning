@@ -72,7 +72,7 @@ public class StudentGradeView {
           FrameGrade.add(txtGPA);
 
         btnCalulate = new JButton("Calulator");
-        Calulate cal = new Calulate();
+        Calulate cal = new Calulate(txtGrade,txtCredit,txtGPA);
         btnCalulate.addActionListener(cal);
         FrameGrade.add(btnCalulate);
         
