@@ -1,5 +1,6 @@
 package View;
 
+import Controller.Calulate;
 import guibasic.model.StudentCourse;
 import java.awt.GridLayout;
 import javax.swing.JButton;
@@ -25,6 +26,7 @@ public class StudentGradeView {
     private JTextField txtCredit[];
     private JButton btnCalulate;
     private StudentCourse[] stdGrade;
+    private JTextField txtGPA;
 
     public StudentGradeView(int numOfSubjects, StudentCourse[] myGrade) {
 
@@ -65,8 +67,13 @@ public class StudentGradeView {
             FrameGrade.add(txtGrade[index]);
             FrameGrade.add(txtCredit[index]);
         }
-        
+          FrameGrade.add(new JLabel("GPA"));
+          txtGPA = new JTextField("0.00");
+          FrameGrade.add(txtGPA);
+
         btnCalulate = new JButton("Calulator");
+        Calulate cal = new Calulate();
+        btnCalulate.addActionListener(cal);
         FrameGrade.add(btnCalulate);
         
         
