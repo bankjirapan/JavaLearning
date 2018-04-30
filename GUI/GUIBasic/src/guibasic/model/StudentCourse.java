@@ -31,8 +31,11 @@ public class StudentCourse {
         switch (grade) {
             
             case "A" : value = 4; break;
+            case "B+":value =  3.5f; break;
             case "B" : value = 3; break;
+            case "C+" : value = 2.5f; break;
             case "C" : value = 2; break;
+            case "D+" : value = 1.5f; break;
             case "D" : value = 1; break;
             case "F" : value = 0; break;
         }
