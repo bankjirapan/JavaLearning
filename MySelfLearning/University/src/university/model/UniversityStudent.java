@@ -28,6 +28,10 @@ public class UniversityStudent extends Student {
         this.alumni = alumni;
     }
 
+    public double expensePerSemester() {
+        return 0;
+    }
+
     @Override
     public String toString() {
         return "UniversityStudent{" + "educationSupportFee=" + educationSupportFee + ", scholarship=" + scholarship + ", alumni=" + alumni + '}';
