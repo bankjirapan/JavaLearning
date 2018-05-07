@@ -17,39 +17,15 @@ public abstract class Student {
 
     public Student() {
     }
-    
-    public abstract double expensePerSemester();
-
-    
+     
     public Student(long StudentId, String studentName, double tuition) {
         this.StudentId = StudentId;
         this.studentName = studentName;
         this.tuition = tuition;
     }
 
-    public long getStudentId() {
-        return StudentId;
-    }
+    public abstract double expensePerSemester();
 
-    public void setStudentId(long StudentId) {
-        this.StudentId = StudentId;
-    }
-
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public double getTuition() {
-        return tuition;
-    }
-
-    public void setTuition(double tuition) {
-        this.tuition = tuition;
-    }
 
     @Override
     public String toString() {
