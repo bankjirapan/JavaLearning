@@ -23,7 +23,7 @@ public class KinderGartenStudent extends Student{
      public  double expensePerSemester(){
          
          //ส่งค่ากลับ
-         return this.tuition + this.schoolBusFee + this.schoolBusFee;
+         return this.tuition + this.schoolBusFee + this.annualFee;
          
      }
 
