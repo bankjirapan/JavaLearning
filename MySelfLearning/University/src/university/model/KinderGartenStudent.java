@@ -21,12 +21,15 @@ public class KinderGartenStudent extends Student{
     }
     
      public  double expensePerSemester(){
-         return 0;
+         
+         //ส่งค่ากลับ
+         return this.tuition + this.schoolBusFee + this.schoolBusFee;
+         
      }
 
     @Override
     public String toString() {
-        return "KinderGartenStudent{" + "schoolBusFee=" + schoolBusFee + ", annualFee=" + annualFee + ", parentName=" + parentName + '}';
+        return "KinderGartenStudent{" + "studentID=" + super.StudentId + ", StudentName = " + super.studentName + ", tuiltion = " + super.tuition + '}';
     }
 
     
