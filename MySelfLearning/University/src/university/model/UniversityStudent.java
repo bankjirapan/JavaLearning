@@ -29,12 +29,24 @@ public class UniversityStudent extends Student {
     }
 
     public double expensePerSemester() {
-        return 0;
+
+        double TuitionMoney = this.tuition;
+
+        if (this.scholarship) {
+            TuitionMoney = TuitionMoney - (TuitionMoney * 10 / 100);
+        }
+
+        if (this.alumni) {
+            TuitionMoney = TuitionMoney - (TuitionMoney * 5 / 100);
+        }
+        
+        return TuitionMoney + this.educationSupportFee;
+
     }
 
     @Override
     public String toString() {
-        return "UniversityStudent{" + "educationSupportFee=" + educationSupportFee + ", scholarship=" + scholarship + ", alumni=" + alumni + '}';
+        return "UniversityStudent{" + "studentID=" + super.StudentId + ", StudentName = " + super.studentName + ", tuiltion = " + super.tuition + '}';
     }
 
 }
