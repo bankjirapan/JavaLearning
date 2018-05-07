@@ -24,54 +24,6 @@ public class KinderGartenStudent extends Student{
          return 0;
      }
 
-    public double getSchoolBusFee() {
-        return schoolBusFee;
-    }
-
-    public void setSchoolBusFee(double schoolBusFee) {
-        this.schoolBusFee = schoolBusFee;
-    }
-
-    public double getAnnualFee() {
-        return annualFee;
-    }
-
-    public void setAnnualFee(double annualFee) {
-        this.annualFee = annualFee;
-    }
-
-    public String getParentName() {
-        return parentName;
-    }
-
-    public void setParentName(String parentName) {
-        this.parentName = parentName;
-    }
-
-    public long getStudentId() {
-        return StudentId;
-    }
-
-    public void setStudentId(long StudentId) {
-        this.StudentId = StudentId;
-    }
-
-    public String getStudentName() {
-        return studentName;
-    }
-
-    public void setStudentName(String studentName) {
-        this.studentName = studentName;
-    }
-
-    public double getTuition() {
-        return tuition;
-    }
-
-    public void setTuition(double tuition) {
-        this.tuition = tuition;
-    }
-
     @Override
     public String toString() {
         return "KinderGartenStudent{" + "schoolBusFee=" + schoolBusFee + ", annualFee=" + annualFee + ", parentName=" + parentName + '}';
