@@ -1,7 +1,9 @@
-
 package icomcaremaster;
 
+import icomcaremaster.controller.MainController;
 import icomcaremaster.view.LoginView;
+import java.sql.SQLException;
+
 
 /**
  *
@@ -12,10 +14,20 @@ public class IComCareMaster {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws SQLException, ClassNotFoundException{
+       
         
-        LoginView login = new LoginView();
+        MainController main = new MainController();
+        
+        if(main.Status() != 1){
+            System.out.println("Error");
+        } else {
+            System.out.println("OK");
+        }
+         // LoginView login = new LoginView();
+         
+         
+         
     }
-    
+
 }
