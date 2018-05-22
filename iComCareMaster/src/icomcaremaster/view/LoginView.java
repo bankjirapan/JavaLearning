@@ -6,9 +6,13 @@
 package icomcaremaster.view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -27,19 +31,37 @@ public class LoginView {
         JFrame Login = new JFrame();
 
         JLabel WelcomeLogin = new JLabel("Welcome to iComCare");
+        JLabel Username = new JLabel("Username");
+        JLabel Password = new JLabel("Password");
+
+        //สร้าง TextField
+        JTextField txtUsername = new JTextField(10);
+        JTextField txtPassword = new JTextField(10);
 
         //สร้าง Panel
         JPanel MainPanel = new JPanel();
-   
+        JPanel FromPanel = new JPanel();
+        JPanel TitleSoftware = new JPanel();
 
-        //ตั้งค่า Panel
-        MainPanel.add(WelcomeLogin);
-        
-        
+        //ตั้งค่า
+        FromPanel.setLayout(new GridLayout(2, 2));
 
+        //เพิ่ม components to Panel
+        TitleSoftware.add(WelcomeLogin);
+        FromPanel.add(Username);
+        FromPanel.add(Password);
+        FromPanel.add(txtUsername);
+        FromPanel.add(txtPassword);
+
+        //เพิ่ม Panel ลง Panel ใหญ่
+        MainPanel.add(TitleSoftware);
+        MainPanel.add(FromPanel);
+
+        //เพิ่ม Panel to frame
         Login.add(MainPanel);
+
         //New Frame 
-        Login.setSize(500, 500);
+        Login.setSize(400, 300);
         Login.setLocationRelativeTo(Login);
         Login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Login.setVisible(true);
