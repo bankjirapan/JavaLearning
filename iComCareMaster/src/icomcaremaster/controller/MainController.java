@@ -9,6 +9,7 @@ import icomcaremaster.db.ConnectionManager;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Random;
 
 /**
  *
@@ -48,6 +49,19 @@ public class MainController {
         createTable.executeUpdate(sqlCreate);
 
         return createTable.executeUpdate(sqlCreate);
+    }
+
+    public int RegisnewUser(int id,String Username, String Password, String Name, String Addr) throws SQLException {
+
+     
+        Statement insert = connect.createStatement();
+
+        String insertCommand = "INSERT INTO admin_login (ID,USERNAME,PASSWORD,NAME,ADDRES) "
+                + "VALUES(" + id + ",'" + Username + "','" + Password + "','" + Name + "','" + Addr + "')";
+
+        insert.executeUpdate(insertCommand);
+
+        return insert.executeUpdate(insertCommand);
     }
 
     public int Status() {

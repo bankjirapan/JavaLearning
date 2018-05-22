@@ -53,18 +53,20 @@ public class RegisterView {
         btnActions btnEvent = new btnActions(txtUsername, txtPassword, txtName, txtAddr);
         btnsubmit.addActionListener(btnEvent);
         //ตั้งค่า
-        FromPanel.setLayout(new GridLayout(6, 6));
+        FromPanel.setLayout(new GridLayout(6, 2));
 
         //เพิ่ม components to Panel
         TitleSoftware.add(WelcomeLogin);
+
         FromPanel.add(Username);
-        FromPanel.add(Password);
-        FromPanel.add(txtName);
-        FromPanel.add(txtAddr);
-        FromPanel.add(Name);
-        FromPanel.add(Addr);
         FromPanel.add(txtUsername);
+        FromPanel.add(Password);
         FromPanel.add(txtPassword);
+
+        FromPanel.add(Name);
+        FromPanel.add(txtName);
+        FromPanel.add(Addr);
+        FromPanel.add(txtAddr);
 
         FromPanel.add(btnsubmit);
 

@@ -7,6 +7,10 @@ package icomcaremaster.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextField;
 
 /**
@@ -31,9 +35,22 @@ public class btnActions implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         System.out.println("Click Create");
-    
-        System.out.println(txtUsername.getText());
-    
+
+        Random rand = new Random();
+        int id = rand.nextInt(999) + 1;
+
+        try {
+            MainController mainCon = new MainController();
+
+            mainCon.RegisnewUser(id, txtUsername.getText(), txtPassword.getText(), txtName.getText(), txtAddr.getText());
+            System.out.println("Ok");
+
+        } catch (SQLException sql) {
+            System.out.println(sql);
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex);
+        }
+
     }
 
 }
