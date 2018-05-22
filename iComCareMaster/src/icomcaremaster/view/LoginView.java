@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -33,6 +34,8 @@ public class LoginView {
         JLabel WelcomeLogin = new JLabel("Welcome to iComCare");
         JLabel Username = new JLabel("Username");
         JLabel Password = new JLabel("Password");
+        JButton btnsubmit = new JButton("Login");
+        JButton btnCalcel = new JButton("Cancel");
 
         //สร้าง TextField
         JTextField txtUsername = new JTextField(10);
@@ -44,7 +47,7 @@ public class LoginView {
         JPanel TitleSoftware = new JPanel();
 
         //ตั้งค่า
-        FromPanel.setLayout(new GridLayout(2, 2));
+        FromPanel.setLayout(new GridLayout(3, 1));
 
         //เพิ่ม components to Panel
         TitleSoftware.add(WelcomeLogin);
@@ -52,6 +55,8 @@ public class LoginView {
         FromPanel.add(Password);
         FromPanel.add(txtUsername);
         FromPanel.add(txtPassword);
+        FromPanel.add(btnsubmit);
+        FromPanel.add(btnCalcel);
 
         //เพิ่ม Panel ลง Panel ใหญ่
         MainPanel.add(TitleSoftware);
